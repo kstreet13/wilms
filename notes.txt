@@ -1,0 +1,8 @@
+2024-11-18
+----------
+Lola Takhirov, 2nd year in Nils' lab
+Wilms Tumor, pediatric cancer, problem with kidney development
+samples from CHLA
+Connor created integrated object with 4 normal kidney samples
+connection between tumor nephrogenic cells and interstitial cells (not a connection that usually exists)
+totem clustering
