@@ -71,6 +71,38 @@ rm(rna,s1,s2,s3,s4,keep,LRs,TFs)
 stab <- stabMap(assay_list, reference_list = c("rna"),
                 suppressMessages = FALSE, maxFeatures = nrow(assay_list$rna),
                 plot = TRUE)
+### re-run without reference
+### if that doesn't work, WNN?
+
+
+mod <- factor(rep(names(assay_list),
+                  times = sapply(assay_list,ncol)))
+
+umap <- uwot::umap(stab)
+
+
+# Plotting
+
+ord <- sample(nrow(umap))
+cv <- alpha(brewer.pal(5,'Set1'),.4)[mod]
+
+# all samples
+plot(umap[ord,], asp=1, col = cv[ord],
+     main='Combined', pch=16, cex = .5)
+
+# one sample
+samp <- 's4'
+plot(range(umap[,1]),range(umap[,2]), asp=1, col='white', main = samp)
+points(umap[which(mod==samp), ], col = cv[which(mod==samp)], cex = .5)
+
+
+# rna
+plot(range(umap[,1]),range(umap[,2]), asp=1, col='white', main = 'rna')
+points(umap[which(mod=='rna'), ], col = colorby(rna$Sample), cex = .5)
+
+
+fts <- sample(rownames(assay_list$s1), 50)
+DotPlot(rna, fts)
 
 
 
