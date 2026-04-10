@@ -6,3 +6,16 @@ samples from CHLA
 Connor created integrated object with 4 normal kidney samples
 connection between tumor nephrogenic cells and interstitial cells (not a connection that usually exists)
 totem clustering
+
+
+2026-04-10
+----------
+Analysis didn't go as planned, tumor is quite different from development
+Focus on NPC->nephron-like cell trajectory
+Can't integrate Wilms tumor scRNAseq with spatial (doesn't match as well)
+Tumor should be more homogeneous than whole kidney samples
+Want to find developmental processes in Wilms tumor
+Using "UCell" to look at cell signatures in each dataset separately?
+Big question: how does Wilm's tumor resemble normal development?
+Connor wants to un-normalize some data
+
